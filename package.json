@@ -1,0 +1,20 @@
+{
+  "name": "formvalidacaocomclassesjs",
+  "version": "1.0.0",
+  "description": "Formulário de Validação utilizando classes em JS",
+  "main": "./assets/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enthony2021/FormValidacaoComClassesJS.git"
+  },
+  "author": "Enthony Stevie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enthony2021/FormValidacaoComClassesJS/issues"
+  },
+  "homepage": "https://github.com/Enthony2021/FormValidacaoComClassesJS#readme"
+}
