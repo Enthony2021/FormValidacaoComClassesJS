@@ -37,8 +37,8 @@ class ValidaFormulario {
                 valid = false;
                 this.criaErro(senha, "A senha precisa ter entre 3 e 12 caracteres!");
             }
-            return valid;
         }
+        return valid;
     }
     camposSaoValidos() {
         let valid = true;
@@ -65,8 +65,8 @@ class ValidaFormulario {
                     }
                 }
             }
-            return valid;
         }
+        return valid;
     }
     validaUsuario(campo) {
         const usuario = campo.value;

@@ -17,7 +17,7 @@ class ValidaCPF {
     return novoCPF;
   }
 
-  geraDigito(cpfSemDigito: string) {
+  geraDigito(cpfSemDigito: string): string {
     let total = 0;
     let reverso = cpfSemDigito.length + 1;
 

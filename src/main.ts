@@ -8,7 +8,7 @@ class ValidaFormulario {
     this.eventos();
   }
 
-  eventos() {
+  eventos(): void {
     if (this.formulario) {
       this.formulario.addEventListener("submit", (e) => {
         this.handleSubmit(e);
@@ -16,7 +16,7 @@ class ValidaFormulario {
     }
   }
 
-  handleSubmit(e: SubmitEvent) {
+  handleSubmit(e: SubmitEvent): void {
     e.preventDefault();
     const camposValidos = this.camposSaoValidos();
     const senhasValidas = this.senhasSaoValidas();
@@ -29,7 +29,7 @@ class ValidaFormulario {
     }
   }
 
-  senhasSaoValidas() {
+  senhasSaoValidas(): boolean {
     let valid = true;
 
     if (this.formulario) {
@@ -52,12 +52,12 @@ class ValidaFormulario {
         valid = false;
         this.criaErro(senha, "A senha precisa ter entre 3 e 12 caracteres!");
       }
-
-      return valid;
     }
+
+    return valid;
   }
 
-  camposSaoValidos() {
+  camposSaoValidos(): boolean {
     let valid = true;
 
     if (this.formulario) {
@@ -87,12 +87,12 @@ class ValidaFormulario {
           }
         }
       }
-  
-      return valid;
     }
+
+    return valid;
   }
 
-  validaUsuario(campo: HTMLInputElement) {
+  validaUsuario(campo: HTMLInputElement): boolean {
     const usuario = campo.value;
     let valid = true;
     if (usuario.length < 3 || usuario.length > 12) {
@@ -111,7 +111,7 @@ class ValidaFormulario {
     return valid;
   }
 
-  validaCPF(campo: HTMLInputElement) {
+  validaCPF(campo: HTMLInputElement): boolean {
     const cpf: ValidaCPF = new ValidaCPF(campo.value);
     if (!cpf.valida()) {
       this.criaErro(campo, "CPF Inválido!");
@@ -121,7 +121,7 @@ class ValidaFormulario {
     return true;
   }
 
-  criaErro(campo: HTMLElement, msg: string) {
+  criaErro(campo: HTMLElement, msg: string): void {
     const div: HTMLDivElement = document.createElement("div");
     div.innerHTML = msg;
     div.classList.add("erro-text");
