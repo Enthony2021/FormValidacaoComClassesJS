@@ -12,10 +12,12 @@
     h2 {
         font-size: .8rem;
         margin-bottom: 30px;
+        padding: 0 20px;
+        text-align: center;
     }
 
     .container {
-        width: 95%;
+        width: 90%;
     }
 
     .erro-text {
@@ -24,5 +26,10 @@
 
     .formulario button {
         margin-bottom: 20px;
+        width: 60%;
+    }
+
+    .formulario > label > input {
+        width: 90%;
     }
 }
