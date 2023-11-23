@@ -68,7 +68,8 @@ class ValidaFormulario {
   
       for (let campo of this.formulario.querySelectorAll(".validar")) {
 
-        const label: HTMLLabelElement | null = campo.previousElementSibling as HTMLLabelElement;
+        const label: HTMLLabelElement | null = campo.parentNode as HTMLLabelElement;
+        console.log(label);
 
         const labelName = label.innerText; 
   
@@ -130,3 +131,15 @@ class ValidaFormulario {
 }
 
 const valida = new ValidaFormulario(formulario);
+
+function registerOrLogin() {
+  let registerOrLogin: HTMLElement | null = document.querySelector(".banner-img");
+
+  if(registerOrLogin?.classList.contains('right-side')) {
+    registerOrLogin?.classList.remove('right-side');
+    registerOrLogin?.classList.add('left-side');
+  } else {
+    registerOrLogin?.classList.remove('left-side');
+    registerOrLogin?.classList.add('right-side');
+  }
+}

@@ -5,7 +5,10 @@
   "main": "./assets/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "build-js": "tsc",
+    "start:shell": "xdg-open ./index.html",
+    "start:bash": "start ./index.html"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/Enthony2021/FormValidacaoComClassesJS/issues"
   },
-  "homepage": "https://github.com/Enthony2021/FormValidacaoComClassesJS#readme"
+  "homepage": "https://github.com/Enthony2021/FormValidacaoComClassesJS#readme",
+  "dependencies": {
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.1"
+  }
 }
