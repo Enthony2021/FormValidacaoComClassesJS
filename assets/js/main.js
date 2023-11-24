@@ -49,7 +49,6 @@ class ValidaFormulario {
             }
             for (let campo of this.formulario.querySelectorAll(".validar")) {
                 const label = campo.parentNode;
-                console.log(label);
                 const labelName = label.innerText;
                 if (campo instanceof HTMLInputElement) {
                     if (!campo.value) {
@@ -98,14 +97,3 @@ class ValidaFormulario {
     }
 }
 const valida = new ValidaFormulario(formulario);
-function registerOrLogin() {
-    let registerOrLogin = document.querySelector(".banner-img");
-    if (registerOrLogin === null || registerOrLogin === void 0 ? void 0 : registerOrLogin.classList.contains('right-side')) {
-        registerOrLogin === null || registerOrLogin === void 0 ? void 0 : registerOrLogin.classList.remove('right-side');
-        registerOrLogin === null || registerOrLogin === void 0 ? void 0 : registerOrLogin.classList.add('left-side');
-    }
-    else {
-        registerOrLogin === null || registerOrLogin === void 0 ? void 0 : registerOrLogin.classList.remove('left-side');
-        registerOrLogin === null || registerOrLogin === void 0 ? void 0 : registerOrLogin.classList.add('right-side');
-    }
-}
