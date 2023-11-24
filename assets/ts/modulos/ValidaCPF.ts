@@ -1,4 +1,4 @@
-class ValidaCPF {
+export default class ValidaCPF {
   private cpfLimpo: string;
 
   constructor(cpfEnviado: string) {

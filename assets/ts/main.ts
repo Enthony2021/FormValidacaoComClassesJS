@@ -1,3 +1,5 @@
+import ValidaCPF from "./modulos/ValidaCPF";
+
 let formulario: HTMLFormElement | null = document.querySelector(".formulario");
 
 class ValidaFormulario {

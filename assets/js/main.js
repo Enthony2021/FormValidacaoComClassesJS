@@ -1,4 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const ValidaCPF_1 = __importDefault(require("./modulos/ValidaCPF"));
 let formulario = document.querySelector(".formulario");
 class ValidaFormulario {
     constructor(formulario) {
@@ -82,7 +87,7 @@ class ValidaFormulario {
         return valid;
     }
     validaCPF(campo) {
-        const cpf = new ValidaCPF(campo.value);
+        const cpf = new ValidaCPF_1.default(campo.value);
         if (!cpf.valida()) {
             this.criaErro(campo, "CPF Inválido!");
             return false;
